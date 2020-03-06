@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RequestActivity" />
     </application>
     <uses-permission
         android:required="true"
@@ -26,6 +27,9 @@
     <uses-permission
         android:required="true"
         android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission
+        android:required="true"
+        android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission
         android:required="true"
         android:name="android.permission.INTERNET"/>

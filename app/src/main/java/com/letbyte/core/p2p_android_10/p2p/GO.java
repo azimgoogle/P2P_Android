@@ -12,6 +12,8 @@ import android.net.wifi.p2p.nsd.WifiP2pDnsSdServiceInfo;
 import android.os.Build;
 import android.util.Log;
 
+import com.letbyte.core.p2p_android_10.MainActivity;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -177,7 +179,7 @@ public class GO implements WifiP2pManager.ChannelListener, WifiP2pManager.Connec
         record.put("available", "visible");
 
         WifiP2pDnsSdServiceInfo service = WifiP2pDnsSdServiceInfo.newInstance("_test",
-                "_presence._tcp", record);
+                MainActivity.SERVICE_TYPE, record);
 
         mWifiP2pManager.addLocalService(mChannel, service, new WifiP2pManager.ActionListener() {
             public void onSuccess() {
